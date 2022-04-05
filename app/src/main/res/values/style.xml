@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="roundedAtStart" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_10px_to_8sdp</item>
+        <item name="cornerSizeBottomLeft">@dimen/_10px_to_8sdp</item>
+    </style>
+
+    <style name="TextPrimaryLight" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_15px_to_12ssp</item>
+        <item name="android:textColor">@color/font_light_primary</item>
+    </style>
+
+    <style name="TextSecondaryLight" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_13px_to_10ssp</item>
+        <item name="android:textColor">@color/font_light_secondary</item>
+    </style>
+
+    <style name="TextLinkLight" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_15px_to_12ssp</item>
+        <item name="android:textColor">@color/font_light_link</item>
+    </style>
+
+    <style name="TextPrimaryDark" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_15px_to_12ssp</item>
+        <item name="android:textColor">@color/font_dark_primary</item>
+    </style>
+
+    <style name="TextSecondaryDark" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_13px_to_10ssp</item>
+        <item name="android:textColor">@color/font_dark_secondary</item>
+    </style>
+
+    <style name="TextLinkDark" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_15px_to_12ssp</item>
+        <item name="android:textColor">@color/font_dark_link</item>
+    </style>
+
+    <style name="TextQuote" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_18px_to_14ssp</item>
+        <item name="android:textColor">@color/font_light_primary</item>
+    </style>
+
+    <style name="TextAward" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_10px_to_8ssp</item>
+        <item name="android:textColor">@color/white_op_80</item>
+    </style>
+
+    <style name="TextScore" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/_16px_to_13sdp</item>
+        <item name="android:textColor">@color/font_dark_primary</item>
+    </style>
+
+</resources>

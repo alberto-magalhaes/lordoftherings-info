@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10px_to_8sdp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/item_movie_background_card">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_fixed_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_24px_to_19sdp"
+        android:paddingVertical="@dimen/_24px_to_19sdp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_gender_icon"
+            android:layout_width="@dimen/_18px_to_14ssp"
+            android:layout_height="@dimen/_18px_to_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/ic_interrogation"
+            tools:ignore="ImageContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_character_name"
+            style="@style/TextPrimaryLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px_to_16sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_gender_icon"
+            tools:text="Character Name"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_expand_icon"
+            android:layout_width="@dimen/_18px_to_14ssp"
+            android:layout_height="@dimen/_10px_to_8sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/ic_down_expand"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_expandable_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cl_fixed_container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_character_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/accent"
+            android:paddingHorizontal="@dimen/_24px_to_19sdp"
+            android:paddingVertical="@dimen/_30px_to_24sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_detail_label"
+                style="@style/TextPrimaryDark"
+                android:textSize="@dimen/_20px_to_16ssp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/cl_know_more"
+                app:layout_constraintBottom_toBottomOf="@id/cl_know_more"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/label_details"/>
+
+            <TextView
+                android:id="@+id/tv_character_spouse_label"
+                style="@style/TextSecondaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16px_to_13sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_detail_label"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/label_spouse"/>
+
+            <TextView
+                android:id="@+id/tv_character_spouse"
+                style="@style/TextPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10px_to_8sdp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_character_spouse_label"
+                app:layout_constraintStart_toEndOf="@id/tv_character_spouse_label"
+                tools:text="Spouse Name"/>
+
+            <TextView
+                android:id="@+id/tv_character_race_label"
+                style="@style/TextSecondaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16px_to_13sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_character_spouse_label"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/label_race"/>
+
+            <TextView
+                android:id="@+id/tv_character_race"
+                style="@style/TextPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10px_to_8sdp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_character_race_label"
+                app:layout_constraintStart_toEndOf="@id/tv_character_race_label"
+                tools:text="Human"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_know_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_8px_to_6sdp"
+                android:paddingHorizontal="@dimen/_12px_to_10sdp"
+                android:background="@drawable/item_movie_background_card"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_know_more"
+                    style="@style/TextPrimaryLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/know_more"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_external"
+                    android:src="@drawable/ic_external"
+                    android:layout_width="@dimen/_16px_to_13sdp"
+                    android:layout_height="@dimen/_16px_to_13sdp"
+                    android:layout_marginStart="@dimen/_10px_to_8sdp"
+                    app:layout_constraintTop_toTopOf="@id/tv_know_more"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_know_more"
+                    app:layout_constraintStart_toEndOf="@id/tv_know_more"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_quotes_label"
+            style="@style/TextPrimaryLight"
+            android:textSize="@dimen/_24px_to_19ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32px_to_26sdp"
+            android:layout_marginStart="@dimen/_24px_to_19sdp"
+            app:layout_constraintTop_toBottomOf="@id/cl_character_info"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/label_quotes"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_quote_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12px_to_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tv_quotes_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_quote"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

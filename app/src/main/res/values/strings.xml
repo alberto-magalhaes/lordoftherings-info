@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LOTR Info</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="know_more">Know more</string>
+    <string name="label_race">Race:</string>
+    <string name="label_spouse">Spouse:</string>
+    <string name="label_details">Details</string>
+    <string name="label_quotes">Quotes</string>
+
+    <string name="n_award_nominations">%1$d Award nominations</string>
+    <string name="n_awards_won">%1$d Awards won</string>
+
+    <string name="movie_favorites_added">%1$s added to favorites</string>
+    <string name="movie_favorites_removed">%1$s removed from favorites</string>
+
+</resources>

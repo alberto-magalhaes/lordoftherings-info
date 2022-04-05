@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:outlineProvider="background"
+    android:layout_marginBottom="@dimen/_20px_to_16sdp"
+    android:background="@drawable/item_movie_background_card">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="@dimen/_80px_to_64sdp"
+        android:orientation="vertical"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_movie_cover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/roundedAtStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        tools:src="@drawable/lotr_1_cover"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_title"
+        style="@style/TextPrimaryLight"
+        tools:text="Movie Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12px_to_10sdp"
+        android:layout_marginStart="@dimen/_20px_to_16sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_subtitle"
+        style="@style/TextSecondaryLight"
+        tools:text="Movie Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6px_to_5sdp"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_title"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_release"
+        style="@style/TextSecondaryLight"
+        tools:text="Release year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6px_to_5sdp"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_subtitle"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_favorite"
+        android:background="@drawable/ic_favorite"
+        android:backgroundTint="@color/gray_op_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20px_to_16sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_45px_to_36sdp"
+        android:layout_marginTop="@dimen/_12px_to_10sdp"
+        android:background="@drawable/item_movie_background_stripe"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_release"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_award_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_award_icon"
+                android:src="@drawable/ic_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px_to_16sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_award_nomination"
+                style="@style/TextAward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5px_to_4sdp"
+                app:layout_constraintTop_toTopOf="@id/iv_award_icon"
+                app:layout_constraintStart_toEndOf="@id/iv_award_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="3 Reward nomination"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_award_won"
+                style="@style/TextAward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/iv_award_icon"
+                app:layout_constraintStart_toStartOf="@id/tv_award_nomination"
+                tools:text="1 Reward won"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rotten_icon"
+            android:src="@drawable/ic_rotten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12px_to_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_rotten_score"/>
+
+        <View
+            android:id="@+id/view_score_indicator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_6px_to_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_rotten_score"
+            app:layout_constraintEnd_toEndOf="@id/tv_rotten_score"
+            tools:background="@color/green_op_100"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rotten_score"
+            style="@style/TextPrimaryDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20px_to_16sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="85"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
