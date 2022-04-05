@@ -2,7 +2,7 @@
 
 Hello, this a simple application implemented using the [The One API](https://the-one-api.dev/). 
 
-I uses the following technologies/libraries:
+It uses the following technologies/libraries:
 > Retrofit
 
 > OkHttp
